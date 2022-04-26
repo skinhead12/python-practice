@@ -2,13 +2,12 @@ from django.shortcuts import render
 import random
 
 def home(request):
-    return render (request, 'home.html')
+    return render (request, 'generator/home.html')
 
 def about(request):
-    return render (request, 'about.html')
+    return render (request, 'generator/about.html')
 
-def navbar(request):
-    return render (request, '_navbar.html')
+
 
 def password(request):
     characters = list('abcdefghijklmnopqrstuvwxyz')
@@ -29,4 +28,4 @@ def password(request):
         generated_password += random.choice(characters)
 
 
-    return render (request, 'password.html', {'password':generated_password})    
+    return render (request, 'generator/password.html', {'password':generated_password})    
